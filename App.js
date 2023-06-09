@@ -16,6 +16,9 @@ import { Provider } from "react-redux";
 import store from "./store";
 import Location_HN from "./screens/Location_HN";
 import Location_HCM from "./screens/Location_HCM";
+import Filter from "./screens/Filter";
+import Quiz from "./screens/Quiz";
+import { vw, vh, vmin, vmax } from 'react-native-expo-viewport-units';
 
 const Stacks = createNativeStackNavigator();
 
@@ -62,6 +65,22 @@ function MyDrawer() {
           },
         }}
       />
+      <Drawer.Screen
+        name="Screen2"
+        component={Quiz}
+        options={{
+          drawerActiveBackgroundColor: "#F9F4EE",
+          drawerLabelStyle: {
+            color: "#1C6D64",
+            fontWeight: "500",
+            fontSize: 16,
+          },
+          drawerLabel: "Trắc nghiệm gợi ý",
+          drawerIcon: () => {
+            return <Fontisto name="pie-chart-1" size={20} color="#1C6D64" />;
+          },
+        }}
+      />
     </Drawer.Navigator>
   );
 }
@@ -74,6 +93,8 @@ export default function App() {
           <Stacks.Screen name="Onboadring" component={Onboarding} />
           <Stacks.Screen name="Login" component={Login} />
           <Stacks.Screen name="Resgister" component={Resgister} />
+          <Stacks.Screen name="Quiz" component={Quiz} />
+          <Stacks.Screen name="Filter" component={Filter} />
           <Stacks.Screen name="Detail" component={DetailScreen} />
           <Stacks.Screen name="Bookmark" component={BookmarkScreen} />
           <Stacks.Screen name="Location_HN" component={Location_HN} />

@@ -14,6 +14,7 @@ import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../CardReducer";
 import CardResult from "../components/CardResult";
+import { vw, vh, vmin, vmax } from 'react-native-expo-viewport-units';
 
 const Screen1 = () => {
   const navigation = useNavigation();
@@ -42,7 +43,8 @@ const Screen1 = () => {
         style={{
           paddingTop: 60,
           backgroundColor: "#F9F4EE",
-          height: 200,
+          // height: 200,
+          paddingBottom: vw(4),
           borderRadius: 25,
           shadowColor: "#000",
           shadowOffset: { width: 0, height: 2 },

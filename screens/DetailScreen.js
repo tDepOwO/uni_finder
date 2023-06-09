@@ -10,6 +10,7 @@ import React from "react";
 import { AntDesign, Ionicons } from "@expo/vector-icons";
 import { SliderBox } from "react-native-image-slider-box";
 import { useNavigation, useRoute } from "@react-navigation/native";
+import { vw, vh, vmin, vmax } from 'react-native-expo-viewport-units';
 
 const DetailScreen = () => {
   const navigation = useNavigation();
@@ -26,7 +27,8 @@ const DetailScreen = () => {
         style={{
           paddingTop: 60,
           backgroundColor: "#F9F4EE",
-          height: 235,
+          // height: 235,
+          paddingBottom: vw(4),
           borderRadius: 25,
           shadowColor: "#000",
           shadowOffset: { width: 0, height: 2 },
@@ -141,7 +143,7 @@ const DetailScreen = () => {
         </View>
         <View style={{ marginTop: 28, marginHorizontal: 20 }}>
           <Text style={{ fontSize: 20 }}>Thông tin</Text>
-          <View style={{ borderWidth: 1, marginTop: 8 }}>
+          <View style={{ marginTop: 8, marginBottom: vh(6)}}>
             <View>
               <View style={{ marginHorizontal: 5, width: "93%" }}>
                 <View style={{ flexDirection: "row" }}>

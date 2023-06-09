@@ -13,6 +13,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getDocs, collection } from "firebase/firestore";
 import CardResult from "../components/CardResult";
 import { getProducts } from "../CardReducer";
+import { vw, vh, vmin, vmax } from 'react-native-expo-viewport-units';
 
 const Location_HN = () => {
   const navigation = useNavigation();
@@ -45,7 +46,8 @@ const Location_HN = () => {
         style={{
           paddingTop: 60,
           backgroundColor: "#F9F4EE",
-          height: 200,
+          // height: 200,
+          paddingBottom: vw(4),
           borderRadius: 25,
           shadowColor: "#000",
           shadowOffset: { width: 0, height: 2 },

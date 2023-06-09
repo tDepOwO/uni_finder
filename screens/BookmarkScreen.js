@@ -4,6 +4,7 @@ import { AntDesign, Entypo, Ionicons, MaterialIcons } from "@expo/vector-icons";
 import SearchBar from "../components/SearchBar";
 import CardResult from "../components/CardResult";
 import { useNavigation } from "@react-navigation/native";
+import { vw, vh, vmin, vmax } from 'react-native-expo-viewport-units';
 
 const BookmarkScreen = () => {
   const navigation = useNavigation();
@@ -13,7 +14,7 @@ const BookmarkScreen = () => {
         style={{
           paddingTop: 60,
           backgroundColor: "#F9F4EE",
-          height: 213,
+          paddingBottom: vw(4),
           borderRadius: 25,
           shadowColor: "#000",
           shadowOffset: { width: 0, height: 2 },

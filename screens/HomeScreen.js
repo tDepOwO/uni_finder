@@ -23,6 +23,7 @@ import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../CardReducer";
 import { TextInput } from "react-native-gesture-handler";
+import { vw, vh, vmin, vmax } from 'react-native-expo-viewport-units';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -116,7 +117,7 @@ const HomeScreen = () => {
           style={{
             backgroundColor: "#F9F4EE",
             width: "100%",
-            height: 127,
+            paddingBottom: vw(4),
             marginTop: 20,
             borderRadius: 25,
             shadowColor: "#000",
@@ -148,10 +149,10 @@ const HomeScreen = () => {
                 onChangeText={onSearch}
                 style={styles.textInput}
                 placeholder="Tìm kiếm"
-                o
               />
             </View>
-            <View
+            <TouchableOpacity
+              onPress={() => navigation.navigate("Filter")}
               style={{
                 width: 42,
                 height: 42,
@@ -162,7 +163,7 @@ const HomeScreen = () => {
               }}
             >
               <Entypo name="sound-mix" size={18} color="white" />
-            </View>
+            </TouchableOpacity>
           </View>
           <View
             style={{
