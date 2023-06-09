@@ -43,10 +43,10 @@ export const quizData = [
     ],
 
     kinds = [
-        'Linguistic (Ngôn ngữ)',
         'Logical-Mathematical (Logic học)',
-        'Visual-Spatial (Không gian)',
+        'Linguistic (Ngôn ngữ)',
         'Bodily-Kinesthetic (Động học)',
+        'Visual-Spatial (Không gian)',
         'Musical (Âm nhạc)',
         'Interpersonal (Giao tiếp)',
         'Intrapersonal (Tự nhận thức)',
@@ -54,10 +54,10 @@ export const quizData = [
     ],
 
     majors = [
-        'Ngôn ngữ học (C00, D01, D02, D03, D04, D05, D06, D78, D79, D80, D81, D82, D83)\nVăn học (C00, C03, C04, C15, D01, D02, D03, D04, D05, D06, D14, D15, D78, D79, D80, D81, D82, D83)\nSáng tác văn học (N00, N05)\nSư phạm ngữ văn (C00, D01, D14, D15, D78)\nBiên kịch sân khấu (S00, S01)\nBiên kịch điện ảnh, truyền hình (S00, S01)\nNgôn ngữ Khmer (C00, D01, D14)\nNgôn ngữ Ả Rập (D01, D78, D90)\nNgôn ngữ Hàn Quốc (D01, D78, D96)\nNgôn ngữ Nhật (A01, C00, D02, D03, D01, D06, D10, D14, D15, D63, D66, D79)\nNgôn ngữ Bồ Đào Nha (D01)\nNgôn ngữ Tây Ban Nha (D01)\nNgôn ngữ Trung Quốc (A01, D01, D02, D03, D04, D09, D10, D11, D14, D15, D55, D65, D66, D78)\nNgôn ngữ Đức (D01, D05, D78, D90)\nNgôn ngữ Pháp (A01, D01, D03, D10, D14, D15, D44, D64, D66, D78, D90, D96)\nNgôn ngữ Nga (D01 , D02 , D09 , D10 , D15 , D42 , D66 , D78 , D80 , D90 , D96)\nNgôn ngữ Anh (A01, D01, D07, D08, D09, D10, D11, D14, D15, D72, D78, D84, D85, D96)',
         'Toán tin (A00, A01, D07, D08)\nToán ứng dụng (A00, A01, C01, D01, B00)\nToán học (A00, A01, C01, D01)\nThống kê (A00, A01, D01, D07)\nKỹ thuật máy tính (A00, A01, D01, D90, D07, B00, C01)\nKỹ thuật phần mềm (A00, A01, D01, D10, C01, C02)\nKhoa học máy tính (A00, A01, D01, D07, C01, D08, C14, C02)',
-        'Kiến trúc (V00, V01, V02, V03, V10)\nKỹ thuật xây dựng (A00, A01, A02, A04, A10, B00, C01, C02, C14, C15, D07, D09, D84, D90)\nKỹ thuật môi trường (A00, A01, A02, B00, B01, B02, B03, B04, C01, C02, C08, C13, D01, D07, D08, D90)\nKỹ thuật hình ảnh y học (A00, A01, B00, C05, C08, D08)\nKỹ thuật điều khiển và tự động hóa (A00, A01, B00, C01, D01, D07, D10)\nKỹ thuật không gian (A00, A01)\nKỹ thuật hàng không (A00, A01, D07, D90)\nKỹ thuật cơ khí (A00, A01, B00, C01, D01, D07)\nKỹ thuật công nghiệp (A00, A01, D01, D90)\nKỹ thuật điện tử - viễn thông (A00, A01, B00, C01, C02, C04, D01, D07, D90)\nKỹ thuật máy tính (A00, A01, D01, D90, D07, B00, C01)\nKỹ thuật phần mềm (A00, A01, D01, D10, C01, C02)\nKỹ thuật vật liệu (A00, A01, B00, D07, D09, D90)',
+        'Ngôn ngữ học (C00, D01, D02, D03, D04, D05, D06, D78, D79, D80, D81, D82, D83)\nVăn học (C00, C03, C04, C15, D01, D02, D03, D04, D05, D06, D14, D15, D78, D79, D80, D81, D82, D83)\nSáng tác văn học (N00, N05)\nSư phạm ngữ văn (C00, D01, D14, D15, D78)\nBiên kịch sân khấu (S00, S01)\nBiên kịch điện ảnh, truyền hình (S00, S01)\nNgôn ngữ Khmer (C00, D01, D14)\nNgôn ngữ Ả Rập (D01, D78, D90)\nNgôn ngữ Hàn Quốc (D01, D78, D96)\nNgôn ngữ Nhật (A01, C00, D02, D03, D01, D06, D10, D14, D15, D63, D66, D79)\nNgôn ngữ Bồ Đào Nha (D01)\nNgôn ngữ Tây Ban Nha (D01)\nNgôn ngữ Trung Quốc (A01, D01, D02, D03, D04, D09, D10, D11, D14, D15, D55, D65, D66, D78)\nNgôn ngữ Đức (D01, D05, D78, D90)\nNgôn ngữ Pháp (A01, D01, D03, D10, D14, D15, D44, D64, D66, D78, D90, D96)\nNgôn ngữ Nga (D01 , D02 , D09 , D10 , D15 , D42 , D66 , D78 , D80 , D90 , D96)\nNgôn ngữ Anh (A01, D01, D07, D08, D09, D10, D11, D14, D15, D72, D78, D84, D85, D96)',
         'Huấn luyện thể thao (T00, T02)\nHuấn luyện múa (S00, S01)\nBiên đạo múa (S00, S01, N03)\nTrinh sát an ninh (A01, C03, D01)\nBiên phòng (A01, C00)\nTrinh sát cảnh sát (A01, C03, D01)',
+        'Kiến trúc (V00, V01, V02, V03, V10)\nKỹ thuật xây dựng (A00, A01, A02, A04, A10, B00, C01, C02, C14, C15, D07, D09, D84, D90)\nKỹ thuật môi trường (A00, A01, A02, B00, B01, B02, B03, B04, C01, C02, C08, C13, D01, D07, D08, D90)\nKỹ thuật hình ảnh y học (A00, A01, B00, C05, C08, D08)\nKỹ thuật điều khiển và tự động hóa (A00, A01, B00, C01, D01, D07, D10)\nKỹ thuật không gian (A00, A01)\nKỹ thuật hàng không (A00, A01, D07, D90)\nKỹ thuật cơ khí (A00, A01, B00, C01, D01, D07)\nKỹ thuật công nghiệp (A00, A01, D01, D90)\nKỹ thuật điện tử - viễn thông (A00, A01, B00, C01, C02, C04, D01, D07, D90)\nKỹ thuật máy tính (A00, A01, D01, D90, D07, B00, C01)\nKỹ thuật phần mềm (A00, A01, D01, D10, C01, C02)\nKỹ thuật vật liệu (A00, A01, B00, D07, D09, D90)',
         'Sư phạm âm nhạc, thanh nhạc, piano, biểu diễn nhạc cụ phương tây, đạo diễn, nhiếp ảnh, diễn viên… (N00, N01, N02, N03, N04, N05, N06, N07, N08, N09)',
         'Quản trị nhân lực (A00, A01, D01, D07, C03, D78, D96)\nQuản trị kinh doanh (A00, A01, D01, D07), \nMarketing (A00, A01, D01, D07, D10), \nKinh doanh thương mại (A00, A01, D01, D07)\nSư phạm, Luật (A00, A01, D01, D96)\nGiáo dục học (B00, C00, C01, D01)\nGiáo dục Mầm non (M00) \nGiáo dục Tiểu học (A00, A01, D01) \nGiáo dục Đặc biệt (D01, C00, C15) \nGiáo dục Công dân (C00, C19, D01) \nGiáo dục Thể chất (T01, M08) \nGiáo dục Quốc phòng - An ninh (C00, C19, A08)',
         'Tâm lý học (C00-26.9, B00, D14-25.8, D01)\nTâm lý học giáo dục (B00, B08, D14, D01)\nTriết học (C00, A01, D01, D14)\nVăn học (C00, D01, D14)',
