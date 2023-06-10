@@ -14,11 +14,11 @@ import { vw, vh, vmin, vmax } from 'react-native-expo-viewport-units';
 
 const DetailScreen = () => {
   const navigation = useNavigation();
-  const images = [
-    "https://cdn.grabon.in/gograbon/images/web-images/uploads/1658919135375/swiggy-coupons.jpg",
-    "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mfz2zorpe8in1noybhzo",
-    "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/lhnwo9ezxo7mpkpvtdcy",
-  ];
+  // const images = [
+  //   "https://cdn.grabon.in/gograbon/images/web-images/uploads/1658919135375/swiggy-coupons.jpg",
+  //   "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mfz2zorpe8in1noybhzo",
+  //   "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/lhnwo9ezxo7mpkpvtdcy",
+  // ];
   const router = useRoute();
 
   return (
@@ -83,7 +83,7 @@ const DetailScreen = () => {
         showsVerticalScrollIndicator={false}
       >
         <View style={{ marginTop: 23 }}>
-          <SliderBox
+          {/* <SliderBox
             images={images}
             autoPlay
             circleLoop
@@ -93,7 +93,7 @@ const DetailScreen = () => {
               borderRadius: 20,
               width: "90%",
             }}
-          />
+          /> */}
         </View>
         <View
           style={{ flexDirection: "row", marginTop: 26, marginHorizontal: 24 }}
