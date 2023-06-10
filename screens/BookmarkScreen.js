@@ -1,12 +1,47 @@
-import { Image, ScrollView, StyleSheet, Text, View } from "react-native";
+import {
+  Image,
+  ScrollView,
+  StyleSheet,
+  Text,
+  View,
+  FlatList,
+  TouchableOpacity,
+} from "react-native";
 import React from "react";
 import { AntDesign, Entypo, Ionicons, MaterialIcons } from "@expo/vector-icons";
 import SearchBar from "../components/SearchBar";
 import CardResult from "../components/CardResult";
 import { useNavigation } from "@react-navigation/native";
-import { vw, vh, vmin, vmax } from 'react-native-expo-viewport-units';
+import { vw, vh, vmin, vmax } from "react-native-expo-viewport-units";
+import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { addBookmark, removeBookmark } from "../bookmarkActions";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../firebase";
 
 const BookmarkScreen = () => {
+  const card = useSelector((state) => state.card.card);
+  const dispatch = useDispatch();
+  const [bookmarkedItems, setBookmarkedItems] = useState([]);
+
+  useEffect(() => {
+    const fetchBookmarkedItems = async () => {
+      const colRef = collection(db, "uni_list");
+      const docsSnap = await getDocs(colRef);
+      const items = [];
+      docsSnap.forEach((doc) => {
+        items.push(doc.data());
+      });
+      const bookmarkedItems = items.filter((item) => card.includes(item.id));
+      setBookmarkedItems(bookmarkedItems);
+    };
+
+    fetchBookmarkedItems();
+  }, [card]);
+
+  const removeFromBookmarks = (id) => {
+    dispatch(removeBookmark(id));
+  };
   const navigation = useNavigation();
   return (
     <View style={{ backgroundColor: "#EB9629", height: "100%" }}>
@@ -89,9 +124,13 @@ const BookmarkScreen = () => {
           </View>
         </View>
       </View>
-      <ScrollView style={{ alignSelf: "center", marginTop: 20 }}>
-        <CardResult />
-      </ScrollView>
+      <View style={{ alignSelf: "center", marginTop: 20 }}>
+        <FlatList
+          data={bookmarkedItems}
+          renderItem={({ item }) => <CardResult item={item} />}
+          keyExtractor={(item) => item.id}
+        />
+      </View>
     </View>
   );
 };

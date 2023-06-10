@@ -1,14 +1,33 @@
-import { Image, Pressable, StyleSheet, Text, View } from "react-native";
-import React, { useEffect, useState } from "react";
-import { Feather, Ionicons } from "@expo/vector-icons";
+import {
+  Image,
+  Pressable,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import { useEffect, useState } from "react";
+import { Feather, FontAwesome, Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import { auth, db } from "../firebase";
 import { collection, doc, getDoc } from "firebase/firestore";
-import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../CardReducer";
+import { useDispatch, useSelector } from "react-redux";
+import { addBookmark, removeBookmark } from "../bookmarkActions";
 
 const CardResult = ({ item }) => {
   const navigation = useNavigation();
+  const dispatch = useDispatch();
+  const card = useSelector((state) => state.card.card);
+  const isBookmarked = card.includes(item.id);
+
+  const toggleBookmark = (itemId) => {
+    if (card.includes(itemId)) {
+      dispatch(removeBookmark(itemId));
+    } else {
+      dispatch(addBookmark(itemId));
+    }
+  };
 
   return (
     <Pressable
@@ -123,10 +142,16 @@ const CardResult = ({ item }) => {
                 </Text>
               </View>
             </View>
-
-            <View style={{ right: -38, position: "absolute" }}>
-              <Feather name="bookmark" size={24} color="#1C6D64" />
-            </View>
+            <TouchableOpacity
+              style={{ right: -38, position: "absolute" }}
+              onPress={toggleBookmark}
+            >
+              <FontAwesome
+                name={isBookmarked ? "bookmark" : "bookmark-o"}
+                size={24}
+                color="#1C6D64"
+              />
+            </TouchableOpacity>
           </View>
           <Pressable
             onPress={() =>
